@@ -6,10 +6,4 @@ import { Quote } from './quote';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  quotes: Quote[] = [
-    { id: 1, title: 'Believe' },
-    { id: 2, title: 'Communication' },
-    { id: 3, title: 'Dream' },
-  ];
-}
+export class AppComponent {}
