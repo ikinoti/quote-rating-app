@@ -7,6 +7,11 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
+  quotes: Quote[] = [
+    { id: 1, title: 'Believe' },
+    { id: 2, title: 'Communication' },
+    { id: 3, title: 'Dream' },
+  ];
   constructor() {}
 
   ngOnInit(): void {}
