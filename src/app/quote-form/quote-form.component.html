@@ -1,28 +1,34 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new quote</h2>
   <hr />
-  <form action="">
+  <form
+    (ngSubmit)="
+      genQuote(creater.value, title.value, quoteDesc.value, author.value)
+    "
+  >
     <div class="form-group">
       <label for="name">Full Name</label>
-      <input type="text" name="" id="name" required />
+      <input type="text" name="" id="name" #name required />
     </div>
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" name="" id="title" required />
+      <input type="text" name="" id="title" #title required />
     </div>
     <div class="form-group">
       <label for="quoteDes">Quote</label>
       <textarea
         class="form-control"
         id="quoteDes"
-        cols="15"
+        cols="30"
         rows="3"
         required
+        #quoteDes
       ></textarea>
     </div>
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" name="" id="author" required />
+      <input type="text" name="" id="author" #author required />
     </div>
+    <button type="submit" class="btn btn-primary">Create a Quote</button>
   </form>
 </div>
