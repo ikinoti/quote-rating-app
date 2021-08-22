@@ -2,13 +2,14 @@
 <hr />
 <ul>
   <div *ngFor="let quote of quotes; let i = index">
-    <!-- <li> -->
-    {{ quote.title }}
+    <li [appHighest]="quote.highest">
+      {{ quote.title }}
+    </li>
     <app-quote-detail
       [quote]="quote"
+      [quotes]="quotes"
       (isBad)="badQuote($event, i)"
+      (qVote)="toLike($event, i)"
     ></app-quote-detail>
-
-    <!-- </li> -->
   </div>
 </ul>
