@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quote-form',
   templateUrl: './quote-form.component.html',
-  styleUrls: ['./quote-form.component.css']
+  styleUrls: ['./quote-form.component.css'],
 })
 export class QuoteFormComponent implements OnInit {
+  @Input() genQuote: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
