@@ -4,7 +4,7 @@ import { Directive, Input, ElementRef, HostListener } from '@angular/core';
   selector: '[appHighest]',
 })
 export class HighestDirective {
-  @Input('appHighest') highest: boolean;
+  @Input('appHighest') highest: any;
 
   constructor(private elem: ElementRef) {}
   @HostListener('change') ngOnChanges() {
