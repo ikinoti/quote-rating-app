@@ -2,23 +2,27 @@
   <h3>Qutoes App</h3>
   <hr />
   <div class="container">
-    <app-quote-form></app-quote-form>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div *ngFor="let quote of quotes; let i = index">
-        <div>
-          <h4 [appHighest]="quote.highest">
-            {{ quote.title }}
-          </h4>
-        </div>
-        <div>
-          <app-quote-detail
-            [quote]="quote"
-            [quotes]="quotes"
-            (isBad)="badQuote($event, i)"
-            (qVote)="toLike($event, i)"
-          ></app-quote-detail>
+    <div class="row">
+      <div class="col-md-6">
+        <app-quote-form [genQuote]="quoteFunction"></app-quote-form>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row" *ngFor="let" quote of quotes; let i="index">
+          <div class="panel panel-default" [appHighest]="quote.highest">
+            <div class="panel-heading">
+              <h4>{{ quote.title }}</h4>
+            </div>
+            <div class="panel-body">
+              <p>"{{ quote.quoteDesc }}"</p>
+              <app-quote-detail
+                [quote]="quote"
+                [quotes]="quotes"
+                (isBad)="badQuote($event, i)"
+                (qVote)="toLike($event, i)"
+              ></app-quote-detail>
+            </div>
+          </div>
         </div>
       </div>
     </div>
