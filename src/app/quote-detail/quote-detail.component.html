@@ -1,9 +1,31 @@
-<p>{{ quote.quoteDesc }}</p>
+<div>
+  <div>
+    <span>Author: {{quote.author}}</span>
+    <span>Created By: {{quote.creater}}</span>
+    <span>{{quote.age}}</span>
+  </div>
+  <div>
+    <button (click)="like(true)" (click)="quoteWithHighestVotes()">
+    upvote {{ quote.upvotes }}</button>
+    <button (click)="like(false)">downvote {{ quote.downvotes }}</button>
+  </div>
+  <div>
+    <button (click)="deleteQuote(true)" class="btn btn-outline-danger">Delete</button>
+  </div>
+</div>
+
+
+<h1>{{quote.title}}</h1>
+
+  <blockquote class="blockquote mb-0">
+    <p>
+      {{ quote.quoteDesc }}
+    </p>
+    <footer class="blockquote-footer">
+      <cite title="Source Title">{{ quote.author }}</cite>
+    </footer>
+  </blockquote>
+</div>
 
 <div>
-  <button (click)="like(true)" (click)="quoteWithHighestVotes()">
-    upvote {{ quote.upvotes }}
-  </button>
-  <button (click)="like(false)">downvote {{ quote.downvotes }}</button>
-</div>
-<button (click)="deleteQuote(true)">Delete</button>
+  
