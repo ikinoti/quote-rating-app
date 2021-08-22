@@ -24,6 +24,11 @@ export class QuoteComponent implements OnInit {
       'You have to visit your future wwith your nmind, then walk towards it in reality'
     ),
   ];
+  badQuote(isBad: any, index: any) {
+    if (isBad) {
+      this.quotes.splice(index, 1);
+    }
+  }
   constructor() {}
 
   ngOnInit(): void {}
