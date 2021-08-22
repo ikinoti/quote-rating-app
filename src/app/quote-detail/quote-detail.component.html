@@ -1,2 +1,9 @@
 <p>{{ quote.quoteDesc }}</p>
-<button (click)="quoteBad(true)">Delete</button>
+
+<div>
+  <button (click)="like(true)" (click)="quoteWithHighestVotes()">
+    upvote {{ quote.upvotes }}
+  </button>
+  <button (click)="like(false)">downvote {{ quote.downvotes }}</button>
+</div>
+<button (click)="deleteQuote(true)">Delete</button>
