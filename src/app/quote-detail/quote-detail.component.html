@@ -1,8 +1,8 @@
 <div>
   <div>
-    <span>Author: {{ quote.author }}</span>
-    <span>Created By: {{ quote.creater }}</span>
-    <span>{{ quote.age }}</span>
+    Author:<span id="author"> {{ quote.author }}</span
+    >, Created By:<span id="creater"> {{ quote.creater }}</span
+    >, age:<span id="age"> {{ quote.age }}</span>
   </div>
   <div>
     <button (click)="like(true)" (click)="quoteWithHighestVotes()">
