@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootsrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+
+.desc {
+  font-size: 20px;
+  font-style: italic;
+}
+#author,
+#age,
+#creater {
+  color: lightblue;
+  margin: 2px;
+  font-style: italic;
+}
+button {
+  margin: 3px;
+}
+
+body {
+  background-color: rgb(231, 240, 240);
+  font-family: "Klee One", cursive;
+}
+#form {
+  margin: auto;
+}
