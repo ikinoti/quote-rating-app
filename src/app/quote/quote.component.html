@@ -7,24 +7,24 @@
         <app-quote-form [genQuote]="quoteFunction"></app-quote-form>
       </div>
 
-      <div class="col-md-6">
-        <div class="row" *ngFor="let quote of quotes; let i = index">
-          <div class="panel panel-default" [appHighest]="quote.highest">
-            <div class="panel-heading">
-              <h4>{{ quote.title }}</h4>
-            </div>
-            <div class="panel-body">
-              <p class="desc">"{{ quote.quoteDesc }}"</p>
-              <app-quote-detail
-                [quote]="quote"
-                [quotes]="quotes"
-                (isBad)="badQuote($event, i)"
-                (qVote)="toLike($event, i)"
-              ></app-quote-detail>
-            </div>
+      <!-- start of card -->
+      <div class="col-md-6" *ngFor="let quote of quotes; let i = index">
+        <div class="card" [appHighest]="quote.highest">
+          <div class="card-header">
+            <h4>{{ quote.title }}</h4>
+          </div>
+          <div class="card-body">
+            <p class="desc">"{{ quote.quoteDesc }}"</p>
+            <app-quote-detail
+              [quote]="quote"
+              [quotes]="quotes"
+              (isBad)="badQuote($event, i)"
+              (qVote)="toLike($event, i)"
+            ></app-quote-detail>
           </div>
         </div>
       </div>
+      <!-- end of card -->
     </div>
   </div>
 </div>
