@@ -3,12 +3,12 @@
   <hr />
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8" id="form">
         <app-quote-form [genQuote]="quoteFunction"></app-quote-form>
       </div>
 
       <!-- start of card -->
-      <div class="col-md-6" *ngFor="let quote of quotes; let i = index">
+      <div class="col-md-6 mt-5" *ngFor="let quote of quotes; let i = index">
         <div class="card" [appHighest]="quote.highest">
           <div class="card-header">
             <h4>{{ quote.title }}</h4>
