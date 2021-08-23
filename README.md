@@ -1,4 +1,12 @@
-# Quotes
+# QuotesApp
+
+## Created by
+
+[ikinoti](https://github.com/ikinoti)
+
+## Description
+
+It is an application that displays quotes, allow the user to input new quote, like or dislike the quote and delete the quote.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
@@ -25,3 +33,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Installation
+
+- Open your terminal
+- git clone `https://github.com/ikinoti/quote-rating-app`
+
+* navigate to directory you have clone {cd quote-rating-app}
+
+## Techonologies Used
+
+- html
+- css
+- bootstrap
+- angular
+- javascript
+
+## KNow bugs
+
+None at the moment
+
+## Contact Information
+
+For contribution or any question, contact me at [isaiah.gitonga@student.moringaschool.com]
+
+## License
+
+- _MIT License:_
+
+* Copyright (c) 2021 **Kinoti Gitonga**
