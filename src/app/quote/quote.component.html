@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Qutoes App</h3>
+  <h3 class="text-center">Qutoes App</h3>
   <hr />
   <div class="container">
     <div class="row">
@@ -8,13 +8,13 @@
       </div>
 
       <div class="col-md-6">
-        <div class="row" *ngFor="let" quote of quotes; let i="index">
+        <div class="row" *ngFor="let quote of quotes; let i = index">
           <div class="panel panel-default" [appHighest]="quote.highest">
             <div class="panel-heading">
               <h4>{{ quote.title }}</h4>
             </div>
             <div class="panel-body">
-              <p>"{{ quote.quoteDesc }}"</p>
+              <p class="desc">"{{ quote.quoteDesc }}"</p>
               <app-quote-detail
                 [quote]="quote"
                 [quotes]="quotes"

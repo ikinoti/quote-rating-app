@@ -50,7 +50,7 @@ export class QuoteComponent implements OnInit {
     return this.genQuote.bind(this);
   }
 
-  getQuote(author: string, title: string, quoteDesc: string, creater: string) {
+  genQuote(author: string, title: string, quoteDesc: string, creater: string) {
     let number = this.quotes.length + 1;
     let date = new Date();
     this.quotes.push(
@@ -80,7 +80,7 @@ export class QuoteComponent implements OnInit {
   }
   getHighest() {
     let highest = 0;
-    let highVotedQuote: Quote;
+    let highVotedQuote: any;
     for (let quote of this.quotes) {
       if (quote.upvotes > highest) {
         highest = quote.upvotes;
